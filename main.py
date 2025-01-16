@@ -1,4 +1,4 @@
-from unittest import result
+
 def main():
     path = "books/frankenstein.txt"
     text = read_file(path)
