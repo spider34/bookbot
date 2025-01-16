@@ -3,7 +3,14 @@ def main():
     path = "books/frankenstein.txt"
     text = read_file(path)
     num_words = count_words(text)
-    print(count_char(text))
+    num_char = count_char(text)
+
+    print(f"--- Begin report of {path} ---")
+    print(f"{num_words} words found in the document")
+    print()
+    for i in sorted(num_char):
+        print(f"The '{i}' character was found {num_char[i]} times")
+    print("--- End report ---")
 
 def read_file(path_to_file):
     with open(path_to_file) as f:
